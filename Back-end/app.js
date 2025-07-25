@@ -15,7 +15,8 @@ app.use(logger("dev"));
 require("./models/database").connectDatabase();
 
 const allowedOrigins = [
-  "https://jobs-and-internships.vercel.app"
+  "https://jobs-and-internships.vercel.app",
+    "https://jobs-and-internships-git-main-kunal-lokhandes-projects.vercel.app"
 ];
 
 app.use(
