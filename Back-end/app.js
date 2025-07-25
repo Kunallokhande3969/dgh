@@ -15,7 +15,7 @@ const cors = require("cors");
 app.use(
   cors({
     origin: [
-      " https://jobs-and-internships.vercel.app",
+      "https://jobs-and-internships.vercel.app",
       "http://localhost:3000" ],
     credentials: true,
   })
