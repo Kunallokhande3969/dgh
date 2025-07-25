@@ -52,9 +52,7 @@ const InternshipPage = ({ params }) => {
 
     try {
       const res = await axios.post(
-        `${
-          process.env.REACT_PUBLIC_API_URL || "http://localhost:8080"
-        }/resume/analyze`,
+        'https://jobs-and-internships-i4la681y0-kunal-lokhandes-projects.vercel.app/resume/analyze',
         formData,
         {
           headers: {

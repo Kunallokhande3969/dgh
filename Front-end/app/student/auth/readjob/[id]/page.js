@@ -44,7 +44,7 @@ const Page = ({ params }) => {
     try {
       const res = await axios.post(
         `${
-          process.env.REACT_PUBLIC_API_URL || "http://localhost:8080"
+          process.env.REACT_PUBLIC_API_URL
         }/resume/analyze`,
         formData,
         {

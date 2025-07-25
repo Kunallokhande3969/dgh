@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Create an Axios instance
 const instance = axios.create({
-  baseURL: process.env.REACT_APP_API_BASE_URL || "http://localhost:8080/", // Use environment variable
+  baseURL: process.env.REACT_PUBLIC_API_URL , // Use environment variable
   withCredentials: true, // Include credentials (cookies) in requests
   headers: {
     "Content-Type": "application/json", // Default content type
