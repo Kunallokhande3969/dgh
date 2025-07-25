@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const instance = axios.create({
-  baseURL: process.env.NEXT_PUBLIC_API_URL ,
-  withCredentials: true,
+  baseURL: "https://jobs-and-internships.onrender.com/", 
+  withCredentials: true,  
   headers: {
     "Content-Type": "application/json",
     Accept: "application/json",
