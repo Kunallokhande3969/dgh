@@ -113,7 +113,7 @@ const ProfilePage = () => {
       const formData = new FormData();
       formData.append("photo", file);
 
-      const response = await fetch("http://localhost:8080/resume/upload-photo", {
+      const response = await fetch("https://jobs-and-internships.onrender.com/resume/upload-photo", {
         method: "POST",
         body: formData,
         credentials: "include",
