@@ -25,9 +25,7 @@ const { isAuthenticated } = require("../middlewares/auth");
 router.get("/", homepage);
 
 // Student profile (both GET for fetch, POST for session restore)
-router.post("/student")
-  .get(isAuthenticated, current)
-  .post(isAuthenticated, current);
+router.post("/student", isAuthenticated, current); 
 
 // Delete student: **POST not GET**
 router.post("/student/delete", isAuthenticated, deletestudent);
