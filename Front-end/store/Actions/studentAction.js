@@ -17,15 +17,21 @@ const getErrorMessage = (error, fallback = "Something went wrong") => {
   );
 };
 
-export const asynccurrentstudent = () => async (dispatch, getState) => {
+export const asynccurrentstudent = () => async (dispatch) => {
   try {
-    const { data } = await axios.post("/student");
+    const { data } = await axios.post(
+      "/student", 
+      {}, // Empty body (if needed)
+      {
+        withCredentials: true, // ✅ Cookies send karega
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
     dispatch(addstudent(data));
   } catch (error) {
-    dispatch(iserorr(getErrorMessage(error, "Failed to fetch student")));
-    if (process.env.NODE_ENV === 'development') {
-      console.error("Student fetch error:", error);
-    }
+    dispatch(iserorr(getErrorMessage(error)));
   }
 };
 

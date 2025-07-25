@@ -18,6 +18,7 @@ app.use(
       "https://jobs-and-internships.vercel.app",
       "http://localhost:3000" ],
     credentials: true,
+      methods: ["GET", "POST", "OPTIONS"],
   })
 );
 
