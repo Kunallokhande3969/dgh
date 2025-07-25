@@ -14,8 +14,9 @@ require("./models/database").connectDatabase();
 const cors = require("cors");
 app.use(
   cors({
-    origin: ["http://localhost:3000",
-       "https://finald.vercel.app"],
+    origin: [
+      " https://jobs-and-internships.vercel.app",
+      "http://localhost:3000" ],
     credentials: true,
   })
 );
