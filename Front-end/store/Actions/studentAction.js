@@ -37,7 +37,7 @@ export const asynccurrentstudent = () => async (dispatch) => {
 
 export const asynctstudentsignup = (student) => async (dispatch, getState) => {
   try {
-    const { data } = await axios.post(`${process.env.REACT_PUBLIC_API_URL}/student/signup`, student);
+    const { data } = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/student/signup`, student);
     dispatch(asynccurrentstudent());
   } catch (error) {
     dispatch(iserorr(getErrorMessage(error, "Signup failed")));
